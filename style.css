@@ -50,6 +50,51 @@ body * {
     width: 112px;
     border: 2px solid #ff0066;
     border-radius: 50%;
+    transition: 0.2;
+}
+
+@keyframes rainbow-border{
+		100%,0%{
+			border: 2px solid rgb(255,0,0);
+		}
+		8%{
+			border: 4px solid rgb(255,127,0);
+		}
+		16%{
+			border: 2px solid rgb(255,255,0);
+		}
+		25%{
+			border: 4px solid rgb(127,255,0);
+		}
+		33%{
+			border: 2px solid rgb(0,255,0);
+		}
+		41%{
+			border: 4px solid rgb(0,255,127);
+		}
+		50%{
+			border: 2px solid rgb(0,255,255);
+		}
+		58%{
+			border: 4px solid rgb(0,127,255);
+		}
+		66%{
+			border: 2px solid rgb(0,0,255);
+		}
+		75%{
+			border: 4px solid rgb(127,0,255);
+		}
+		83%{
+			border: 2px solid rgb(255,0,255);
+		}
+		91%{
+			border: 4px solid rgb(255,0,127);
+		}
+}
+
+#profile img:hover {
+    animation-name: rainbow-border;
+    animation: rainbow-border 2s infinite;
 }
 
 #profile p {
